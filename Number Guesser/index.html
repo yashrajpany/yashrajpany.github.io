@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Number Guesser</title>
+    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"></link>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body class="bg-dark">
+  <div class="conatiner">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card card-body text-center mt-5">
+          <h1 class="heading display-1 pb-3">NUMBER GUESSER</h1> 
+          <div id="game">
+          <p><h4>Guess the number between <span class="min-num"></span> and <span class="max-num"></span></h4></p>
+          <div class="form-group"><input type="number" id="guess-input" placeholder="Enter your guess...">
+            <input type="submit" value="Submit" id="guess-btn">
+          </div>
+          
+          <p class = "message"></p>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  <script src = "app.js"></script>
+</body>
+</html>
