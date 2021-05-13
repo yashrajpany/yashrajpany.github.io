@@ -1,8 +1,8 @@
 const about = document.querySelector('#about')
-// const content = document.querySelector('#contact')
+const content = document.querySelector('#contact')
 const projects = document.getElementById('projects')
 const aboutContent = document.querySelector('#about-content')
-// const contactContent = document.querySelector('#contact-content')
+const contactContent = document.querySelector('#contact-content')
 const projectContent = document.querySelector('#project-content')
 
 about.addEventListener('click', () => {
