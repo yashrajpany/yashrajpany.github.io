@@ -2,14 +2,13 @@ const dateInput = document.getElementById('date')
 const timeInput = document.getElementById('time')
 const submit = document.getElementById('btn')
 let result = document.querySelector('.result')
-
+let output
 
 
 submit.addEventListener('click', () =>{
     
     const date = dateInput.value
-    const time = timeInput.value*60
-
+    const time = timeInput.value ? timeInput.value*60000 : 900000
     
     function fetching(){
         result.innerHTML = ''
@@ -20,7 +19,7 @@ submit.addEventListener('click', () =>{
         .then((myjson) =>{
             if(myjson.sessions.length !== 0){
                 myjson.sessions.forEach(data => {
-                    let output = {
+                    output = {
                         name: data.name,
                         address: data.address,
                         pincode: data.pincode,
@@ -30,11 +29,10 @@ submit.addEventListener('click', () =>{
                         vacinie: data.vacinie
                     }
 
-                    if(output.age == 18){
 
-                        Push.create(`Name: ${output.name},Address: ${output.address},Pincode: ${output.pincode},Availibility: ${output.availibility} and Vacine: ${output.vacinie}`)
+                        // Push.create(`Name: ${output.name},Address: ${output.address},Pincode: ${output.pincode},Availibility: ${output.availibility} and Vacine: ${output.vacinie}`)
                         result.innerHTML += `
-                        <div class="card-body">
+                        <div class="card-body" style=" color: white;">
                         <h5 class="card-title">Name: ${output.name}</h5>
                         <h5 class="card-title">Address: ${output.address}, ${output.pincode}</h5>
                         <h5 class="card-subtitle mb-2 text-muted">Age:${output.age}</h5>
@@ -42,13 +40,15 @@ submit.addEventListener('click', () =>{
                         <h6 class="card-subtitle mb-2 text-muted">Availibility: ${output.availibility}</h6>
                         <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vacinie}</h6>
                         </div>`
-                    }else{
-                        result.innerHTML = `<div class="card-body" style="color: white;"><h4>No vaccination slots are available for booking!!</h4></div>`
-                        Push.create("No vaccination slots are available for booking!!")
-                    }
-                    
-                    
+
+                        if(output.age === 18){
+                            Push.create(`Vaccine Available`)
+                        } 
                 })
+
+            }else{
+                result.innerHTML = `<div class="card-body" style="color: white;"><h4>No vaccination slots are available for booking!!</h4></div>`
+                Push.create("No vaccination slots are available for booking!!")
             }
             
         })
@@ -61,6 +61,6 @@ submit.addEventListener('click', () =>{
     setInterval(()=>{
         result.innerHTML = ''
         fetching()
-    },`${time}000`)
+    },`${time}`) 
 })
     
