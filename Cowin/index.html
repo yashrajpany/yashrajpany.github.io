@@ -34,6 +34,23 @@
   <script src = "app.js"></script>
   <script src = "push.min.js"></script>
   <script src = "serviceWorker.min.js"></script>
+    <script>
+      function showNotification(){
+          const notification = new Notification("New message from YRP",{
+              body:"Hope everyone is good"
+          })
+      }
+
+      console.log(Notification.permission);
+
+      if(Notification.permission === "granted"){
+          showNotification()
+      }else if(Notification.permission !== "denied"){
+          Notification.requestPermission().then(permission =>{
+              showNotification()
+          })
+      }
+  </script>
 
 </body>
 </html>
