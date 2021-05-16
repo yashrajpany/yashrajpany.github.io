@@ -31,7 +31,8 @@ submit.addEventListener('click', () =>{
 
 
                         // Push.create(`Name: ${output.name},Address: ${output.address},Pincode: ${output.pincode},Availibility: ${output.availibility} and Vacine: ${output.vacinie}`)
-                        result.innerHTML += `
+                        if(output.age === 18){
+                            result.innerHTML += `
                         <div class="card-body" style=" color: white;">
                         <h5 class="card-title">Name: ${output.name}</h5>
                         <h5 class="card-title">Address: ${output.address}, ${output.pincode}</h5>
@@ -40,6 +41,20 @@ submit.addEventListener('click', () =>{
                         <h6 class="card-subtitle mb-2 text-muted">Availibility: ${output.availibility}</h6>
                         <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vacinie}</h6>
                         </div>`
+                        }else{
+                            result.innerHTML = `<div class="card-body" style="color: white;"><h4>No vaccination slots are available for 18-44!!</h4></div>`
+                        }
+                        if(output.age === 45){
+                            result.innerHTML += `
+                        <div class="card-body" style=" color: white;">
+                        <h5 class="card-title">Name: ${output.name}</h5>
+                        <h5 class="card-title">Address: ${output.address}, ${output.pincode}</h5>
+                        <h5 class="card-subtitle mb-2 text-muted">Age:${output.age}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Fee: ${output.fee}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Availibility: ${output.availibility}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vacinie}</h6>
+                        </div>`
+                        }
 
                         if(output.age === 18){
                             Push.create(`Vaccine Available => Name: ${output.name} ,Pincode: ${output.pincode} ,Availibility: ${output.availibility}`)
