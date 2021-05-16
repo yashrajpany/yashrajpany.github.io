@@ -28,9 +28,6 @@ submit.addEventListener('click', () =>{
                         availibility: data.available_capacity,
                         vacinie: data.vacinie
                     }
-
-
-                        // Push.create(`Name: ${output.name},Address: ${output.address},Pincode: ${output.pincode},Availibility: ${output.availibility} and Vacine: ${output.vacinie}`)
                         if(output.age === 18){
                             result.innerHTML += `
                         <div class="card-body" style=" color: white;">
@@ -55,9 +52,10 @@ submit.addEventListener('click', () =>{
                         <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vacinie}</h6>
                         </div>`
                         }
+                        
 
                         if(output.age === 18){
-                            Push.create(`Vaccine Available => Name: ${output.name} ,Pincode: ${output.pincode} ,Availibility: ${output.availibility}`)
+                            Push.create(`Vaccine Available => Name: ${output.name},Pincode: ${output.pincode},Availibility: ${output.availibility}`)
                         } 
                 })
 
