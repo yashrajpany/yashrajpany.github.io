@@ -42,7 +42,7 @@ submit.addEventListener('click', () =>{
                         </div>`
 
                         if(output.age === 18){
-                            Push.create(`Vaccine Available`)
+                            Push.create(`Vaccine Available => Name: ${output.name} ,Pincode: ${output.pincode} ,Availibility: ${output.availibility}`)
                         } 
                 })
 
