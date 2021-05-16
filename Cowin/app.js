@@ -12,7 +12,7 @@ submit.addEventListener('click', () =>{
     
     function fetching(){
         result.innerHTML = ''
-        fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=312&date=${date}`)
+        fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=312&date=${date}-2021`)
         .then( (res) => {
         return res.json()
         })
