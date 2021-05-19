@@ -28,6 +28,8 @@ submit.addEventListener('click', () =>{
                         age: data.min_age_limit,
                         fee: data.fee_type,
                         availibility: data.available_capacity,
+                        dose1: data.available_capacity_dose1,
+                        dose2: data.available_capacity_dose1,
                         vaccine: data.vaccine
                     }
                 
@@ -38,7 +40,7 @@ submit.addEventListener('click', () =>{
                     <h5 class="card-title">Address: ${output.address}, ${output.pincode}</h5>
                     <h5 class="card-subtitle mb-2 text-muted">Age:${output.age}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Fee: ${output.fee}</h6>
-                    <h6 class="card-subtitle mb-2 text-muted">Availibility: ${output.availibility}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Availability: Dose-1 -${output.dose1} Dose-2 - ${output.dose2} Total - ${output.availibility}</h6>
                     <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vaccine}</h6>
                     </div>`
                   }
