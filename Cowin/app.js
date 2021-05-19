@@ -28,7 +28,7 @@ submit.addEventListener('click', () =>{
                         age: data.min_age_limit,
                         fee: data.fee_type,
                         availibility: data.available_capacity,
-                        vacinie: data.vacinie
+                        vaccine: data.vaccine
                     }
                 
                   if(output.age === 45){
@@ -39,7 +39,7 @@ submit.addEventListener('click', () =>{
                     <h5 class="card-subtitle mb-2 text-muted">Age:${output.age}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Fee: ${output.fee}</h6>
                     <h6 class="card-subtitle mb-2 text-muted">Availibility: ${output.availibility}</h6>
-                    <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vacinie}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vaccine}</h6>
                     </div>`
                   }
                    else{
@@ -50,7 +50,7 @@ submit.addEventListener('click', () =>{
                         <h5 class="card-subtitle mb-2 text-muted">Age:${output.age}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Fee: ${output.fee}</h6>
                         <h6 class="card-subtitle mb-2 text-muted">Availibility: ${output.availibility}</h6>
-                        <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vacinie}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vaccine}</h6>
                         </div>`
 
                         new Notification(`Available @ Name: ${output.name}, ${output.pincode}`,{
