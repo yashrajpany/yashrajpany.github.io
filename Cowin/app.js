@@ -41,7 +41,7 @@ submit.addEventListener('click', () =>{
                     <h5 class="card-subtitle mb-2 text-muted">Age:${output.age}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Fee: ${output.fee}</h6>
                     <h6 class="card-subtitle mb-2 text-muted">Availability: Dose-1 -${output.dose1} Dose-2 - ${output.dose2} Total - ${output.availibility}</h6>
-                    <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vaccine}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Vaccine: ${output.vaccine}</h6>
                     </div>`
                   }
                    else{
@@ -49,10 +49,10 @@ submit.addEventListener('click', () =>{
                         <div class="card-body" style=" color: white;">
                         <h5 class="card-title">Name: ${output.name}</h5>
                         <h5 class="card-title">Address: ${output.address}, ${output.pincode}</h5>
-                        <h5 class="card-subtitle mb-2 text-muted">Age:${output.age}</h5>
+                        <h5 class="card-subtitle mb-2 text-muted">Age: ${output.age}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">Fee: ${output.fee}</h6>
-                        <h6 class="card-subtitle mb-2 text-muted">Availibility: ${output.availibility}</h6>
-                        <h6 class="card-subtitle mb-2 text-muted">Vacine: ${output.vaccine}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Availability: ${output.availibility}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Vaccine: ${output.vaccine}</h6>
                         </div>`
 
                         new Notification(`Available @ Name: ${output.name}, ${output.pincode}`,{
